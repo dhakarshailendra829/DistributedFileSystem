@@ -1,25 +1,36 @@
 Project Title:- Distributed File System with Fault Tolerance
+
+
 Introduction:- A Distributed File System (DFS) with Fault Tolerance is designed to efficiently 
 store and retrieve data across multiple networked nodes while ensuring system reliability 
 and data availability even in the presence of failures.This system plays a crucial role 
 in large-scale computing environments, cloud storage solutions, and enterprise applications.
+
+
 Key Features:- 1.	Data Replication: The system maintains multiple copies of data across different nodes to prevent loss due to hardware or network failures.
 2.	Failure Detection and Recovery: Continuous monitoring of nodes allows the system to detect failures and redirect requests to healthy nodes.
 3.	Load Balancing: Ensures even distribution of data and traffic across all available nodes, preventing bottlenecks.
 4.	Consistency and Data Integrity: Uses efficient mechanisms to ensure that all copies of the data remain synchronized.
 5.	Scalability: The system can dynamically add or remove nodes without disrupting ongoing operations.
 6.	Efficient Data Management: Supports large-scale data processing and retrieval with minimal latency.
+
+
 System Architecture:- 1.    Client Nodes: Users or applications that request file storage and retrieval.
 2.    Master Node: Maintains metadata (file locations, node status) and manages overall system health.
 3.    Storage Nodes: Store actual file chunks and ensure replication and fault tolerance.
 4.    Monitoring & Fault Handling Mechanisms: Continuously track system performance and trigger recovery when failures occur.
+
+
 Work-Flow:- 1. Client requests data storage or retrieval.
 2. Master Node processes the request and assigns storage nodes.
 3. Data is split into chunks and distributed across multiple storage nodes.
 4. Replication ensures fault tolerance by keeping multiple copies of each chunk.
 5. If a node fails, the system redirects requests to a replica.
 6. A recovery process is initiated to replace lost data and restore redundancy.
-Module-Wise Breakdown:-(A). Client Module:- The Client Module is responsible for providing users with an interface to interact with the Distributed File System (DFS). It handles file operations, communicates with the Master Node, and ensures fault tolerance in case of failures.
+
+
+Module-Wise Breakdown:-(A). Client Module:- The Client Module is responsible for providing users with an interface to interact with the
+Distributed File System (DFS). It handles file operations, communicates with the Master Node, and ensures fault tolerance in case of failures.
 Functions:
 •	File Upload: Splits large files into chunks and sends them to the Master Node for storage allocation.
 •	File Download: Requests file chunks from the Master Node and reconstructs them into a complete file.
@@ -66,11 +77,13 @@ Functions:
 •	Real-time Monitoring: Provides a dashboard to monitor file transfers, system health, and storage usage.
 •	Failure Alerts: Sends notifications when critical issues are detected.
 •	Performance Analysis: Helps administrators optimize system performance by analyzing log data.
-Functionalities:-(A). File Storage and Management:-
-1. file uplaod
-2. file download
-3. file deletion
-4. file metadata management
+
+Functionalities:-
+(A). File Storage and Management:-
+  1. file uplaod
+  2. file download
+  3. file deletion
+  4. file metadata management
 (B). Data Replication and Fault Tolerance:-
   1.automatic replication
   2.failure detection and data recovery
